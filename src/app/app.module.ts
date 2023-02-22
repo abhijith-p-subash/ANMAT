@@ -8,6 +8,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 import { appRoutes } from './app.routing';
 import { LayoutModule } from './layout/layout.module';
+import { CoreModule } from './core/core.module';
 
 const routerConfig: ExtraOptions = {
   preloadingStrategy: PreloadAllModules,
@@ -22,7 +23,8 @@ const routerConfig: ExtraOptions = {
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes, routerConfig),
     MatSlideToggleModule,
-    LayoutModule
+    LayoutModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent],
