@@ -27,6 +27,12 @@ export class ModernComponent {
       color: '#ff7f0e',
     },
     {
+      title: 'sign In',
+      icon: 'user',
+      link: '/sign-in',
+      color: '#ff7f0e',
+    },
+    {
       title: 'Statistics',
       icon: 'bar_chart',
       color: '#ff7f0e',

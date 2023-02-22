@@ -4,8 +4,9 @@ import { FooterModule } from './common/footer/footer.module';
 import { SharedModule } from '../shared/shared.module';
 import { ClassicModule } from './layouts/vertical/classic/classic.module';
 import { ModernModule } from './layouts/vertical/modern/modern.module';
+import { EmptyModule } from './layouts/empty/empty.module';
 
-const layoutModules = [FooterModule, ClassicModule, ModernModule];
+const layoutModules = [FooterModule, ClassicModule, ModernModule, EmptyModule];
 
 @NgModule({
   declarations: [LayoutComponent],
