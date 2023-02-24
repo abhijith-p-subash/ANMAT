@@ -4,17 +4,20 @@ import { LayoutComponent } from './layout/layout.component';
 export const appRoutes: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
-    path:'',
+    path: '',
     component: LayoutComponent,
-    data:{
-      layout:'empty'
+    data: {
+      layout: 'empty',
     },
-    children:[
+    children: [
       {
-        path:'sign-in',
-        loadChildren: ()=> import('./modules/auth/sign-in/sign-in.module').then((m)=> m.SignInModule)
-      }
-    ]
+        path: 'sign-in',
+        loadChildren: () =>
+          import('./modules/auth/sign-in/sign-in.module').then(
+            (m) => m.SignInModule
+          ),
+      },
+    ],
   },
   {
     path: '',

@@ -1,1 +1,33 @@
-<p>sign-in works!</p>
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+  <mat-card class="max-w-sm w-full">
+    <mat-card-header>
+      <mat-card-title>Sign In</mat-card-title>
+    </mat-card-header>
+    <form class="p-6" [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="w-full">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" required />
+        <!-- <mat-error *ngIf="signinForm.get('email').hasError('required')"
+          >Email is required</mat-error
+        > -->
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required />
+        <!-- <mat-error *ngIf="signinForm.get('password').hasError('required')"
+          >Password is required</mat-error
+        > -->
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!signinForm.valid"
+      >
+        Sign In
+      </button>
+    </form>
+  </mat-card>
+</div>

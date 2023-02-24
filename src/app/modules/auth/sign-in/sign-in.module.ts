@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import { SignInRoutingModule } from './sign-in-routing.module';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+// 
 import { SignInComponent } from './sign-in.component';
-
+import { SharedModule } from 'src/app/shared/shared.module';
+import { RouterModule } from '@angular/router';
+import { SignInRoutes } from './sign-in.routing';
 
 @NgModule({
-  declarations: [
-    SignInComponent
-  ],
+  declarations: [SignInComponent],
   imports: [
-    CommonModule,
-    SignInRoutingModule
-  ]
+    RouterModule.forChild(SignInRoutes),
+    MatCardModule,
+    MatFormFieldModule,
+    SharedModule,
+  ],
 })
-export class SignInModule { }
+export class SignInModule {}
