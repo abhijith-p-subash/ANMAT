@@ -4,7 +4,6 @@ import { Subject } from 'rxjs';
 @Component({
   selector: 'app-empty',
   templateUrl: './empty.component.html',
-  styleUrls: ['./empty.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class EmptyComponent {

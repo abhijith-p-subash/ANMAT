@@ -29,13 +29,13 @@ export const appRoutes: Route[] = [
       layout: 'empty',
     },
     children: [
-      {
-        path: 'sign-in',
-        loadChildren: () =>
-          import('./modules/auth/sign-in/sign-in.module').then(
-            (m) => m.SignInModule
-          ),
-      },
+      // {
+      //   path: 'sign-in',
+      //   loadChildren: () =>
+      //     import('./modules/auth/sign-in/sign-in.module').then(
+      //       (m) => m.SignInModule
+      //     ),
+      // },
     ],
   },
 ];
